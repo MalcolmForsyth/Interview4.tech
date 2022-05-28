@@ -2,15 +2,16 @@
   "name": "xn--yp9h",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && webpack --mode development",
-    "dev": "python3 back-end/app.py"
+    "build": "(if exist dist rmdir /s /q dist) && webpack --mode development",
+    "start": "node Server.js"
   },
   "author": "Malcolm/Weustis/GrantH",
   "license": "ISC",
   "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0"
