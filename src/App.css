@@ -1,10 +1,13 @@
 .App {
   text-align: center;
-  background-image:url('./gradient.jpg');
+  background: radial-gradient(purple, green);
   background-repeat:no-repeat;
-  background-size:200%;
+  /* background-size:200%; */
   background-position:center;
-  margin: 0; height: 100%; overflow: hidden
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  min-height: 100%;
 }
 
 .App-logo {
@@ -16,44 +19,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  /* background-color: #282c34; */
-  min-height: 5vh;
-  max-height: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: left;
-  font-size: calc(100px + 2vmin);
-  color: white;
-}
-
-.App-text {
-    /* background-color: #282c34; */
-    min-height: 80vh;
-    max-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(50px + 2vmin);
-    color: white;
-  }
-
-.App-link {
-  /* color: #61dafb; */
-  border: none;
-  color: white;
-  background-color: darkblue;
-  padding: 30px 64px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 40px 20px;
-  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

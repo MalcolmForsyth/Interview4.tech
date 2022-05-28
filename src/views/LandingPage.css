@@ -1,0 +1,11 @@
+.LandingPage {
+    text-align: center;
+    background: radial-gradient(purple, green);
+    background-repeat:no-repeat;
+    /* background-size:200%; */
+    background-position:center;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    min-height: 100%;
+  }
