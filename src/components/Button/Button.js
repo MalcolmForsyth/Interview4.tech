@@ -7,7 +7,6 @@ class MainButton extends React.Component {
             <a href="https://reactjs.org" target="_blank" rel="noreferrer">
             <button
                 className="MainButton"
-               
             >
             Get Started
             </button>
