@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import MainButton from './components/Button/Button';
+import Header from './components/Header/Header';
+import MiddleText from './components/Middle-Text/MiddleText';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    render() {
+    return (
+        <div className="App">
+            <Header></Header>
+            <MiddleText></MiddleText>
+            <MainButton></MainButton>
+        </div>
+    );
+    }
 }
+
+
 
 export default App;

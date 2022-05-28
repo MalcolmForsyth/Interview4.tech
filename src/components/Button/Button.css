@@ -1,0 +1,13 @@
+.MainButton {
+    /* color: #61dafb; */
+    border: none;
+    color: white;
+    background-color: darkblue;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 40px 20px;
+    cursor: pointer;
+  }
