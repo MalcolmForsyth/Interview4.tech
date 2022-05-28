@@ -1,4 +1,7 @@
-# xn--yp9h.tech
-- [ ] test
-- [x] test2
+# 🤖.tech
+
+
+## TODO
+- [ ] Build Frontend (Grant)
+- [x] Get World's Best URL (Eustis)
 - [ ] test3
