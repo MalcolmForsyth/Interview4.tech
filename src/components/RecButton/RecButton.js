@@ -8,7 +8,7 @@ const backend_path = "http://127.0.0.1:5000/transcribe"
 class RecButton extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {status: "not started", button_name: "start recording"};
+        this.state = {status: "not started", button_name: "start"};
         
         this.audioChunks = []    
 
