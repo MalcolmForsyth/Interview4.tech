@@ -138,6 +138,7 @@ class RecButton extends React.Component {
                     .catch((err) => console.error(err))
                 const transcript = await transcript_p
                 console.log(transcript.text)
+
                 this.setState({
                    
                     button_name: transcript.text

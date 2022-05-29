@@ -20,7 +20,16 @@ const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
-const cohere = require("cohere-ai");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+
+const { Configuration, OpenAIApi } = require("openai");
+
+
+const configuration = new Configuration({
+  apiKey: "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",
+});
+const openai = new OpenAIApi(configuration);
+
 const ForkTsCheckerWebpackPlugin =
   process.env.TSC_COMPILE_ON_ERROR === 'true'
     ? require('react-dev-utils/ForkTsCheckerWarningWebpackPlugin')
@@ -314,7 +323,7 @@ module.exports = function (webpackEnv) {
        //   os: require.resolve('os-browserify/browser'),
           path: require.resolve('path-browserify'),
           punycode: require.resolve('punycode'),
-      //    process: require.resolve('process/browser'),
+          process: require.resolve('process/browser'),
           querystring: require.resolve('querystring-es3'),
           stream: require.resolve('stream-browserify'),
           string_decoder: require.resolve('string_decoder'),
@@ -615,6 +624,7 @@ module.exports = function (webpackEnv) {
             : undefined
         )
       ),
+      new NodePolyfillPlugin(),
       // Inlines the webpack runtime script. This script is too small to warrant
       // a network request.
       // https://github.com/facebook/create-react-app/issues/5358

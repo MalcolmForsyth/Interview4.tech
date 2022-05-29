@@ -14,35 +14,41 @@ function QuestionScreen(props) {
     const [question, setQuestion] = useState(first_question);
     const [questions, setQuestions] = useState([first_question]);
     const [timerstart, timerreset] = useState([1]);
-
-    const cohere = require('cohere-ai');
-    const model_name = "small";
-    var JOB_CAREER = "";
+    const cohere = require("cohere-ai");
     cohere.init('tqDPnl8QyMk4HmCHRRR2VL3ns94BecutsbQARYqx');
+    
+    const model_name = "xlarge";
+    var JOB_CAREER = "";
+    
 
     async function response(prev_question) {
-        console.log('hello2');
+        console.log('Begin Response Func');
         const response = await cohere.generate(model_name, {
-            prompt: `You are an interviewer generating questions for an candidate for the position of ${JOB_CAREER}, your previous questions were was ${prev_question}`,
+            prompt: "You are an interviewer generating questions for an candidate for the position of Software Engineer",
             max_tokens: 100,
             temperature: 0.9,
             frequency_penalty: 0.5,
             presence_penalty: 1.0,
-            p: 0.6,
-            stop_sequences: ['?', '.']
+            p: 0.6
+            //stop_sequences: ['?', '.']
         });
-        console.log(response);
-        return response.body.generations[0].text;
+        console.log("new Q!");
+        return response
     }
 
     const next_question = () => {
         console.log('hello');
-        response(question).then((res) =>
-        {
-            console.log('hello');
-            console.log(res);
-            setQuestion(res);
-        });
+        let resp = response(question);
+        console.log(resp);
+        
+        // response(question).then((res) =>
+        // {
+        //    // console.log(response);
+        //     console.log(res);
+        //     console.log("waited");
+        //     //  response.body.generations[0].text;
+        //     setQuestion(res);
+        // });
     };
 
     const reset = () => {
