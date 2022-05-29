@@ -2,19 +2,19 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    border: 1px solid #f800aebe;
+    border: 10px solid #f800aebe;
     border-radius: 15px;
     display: flex;
-    height: 32px;
+    height: 100rem;
     margin-left: 2.0px;
     margin-top: 23px;
-    width: 352px;
+    width: 100rem;
     padding: 2px;
   }
   
   .bar {
-    position: absolute;
-    left: 2px;
+    position: relative;
+    left: 10rem;
     align-items: center;
     background-color: #ffffff40;
     border-radius: 15px;

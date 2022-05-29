@@ -12,15 +12,14 @@
     padding: 2px;
   }
   
-  .bar {
-    position: relative;
-    left: 100rem;
+  .displaybar {
+    position: absolute;
+    left: 2px;
     align-items: center;
     background-color: #ffffff40;
     border-radius: 15px;
     height: calc(100% - 4px);
     width: calc(100% - 4px);
-    transition: width 0.2s;
   }
   
   .text {
