@@ -33,6 +33,7 @@
     font-weight: 700;
   }
 .rec-button-1 {
-    left: 47%;
+    margin-left: 100px;
+    margin-right: 100px;
     color: #9e7ae3;
 }
