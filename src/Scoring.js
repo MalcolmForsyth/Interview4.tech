@@ -1,4 +1,4 @@
-export function scoreText(topic, experience, question, answer_transcript, openai){
+export async function scoreText(topic, question, answer_transcript){
     var answer = answer_transcript.ScoreText
     var duration = answer_transcript.audio_duration
     var words = answer_transcript.words
@@ -7,6 +7,7 @@ export function scoreText(topic, experience, question, answer_transcript, openai
     scores.push(scoreSpeed(answer, duration));
     scores.push(scorePauses(words, duration));
     scores.push(scoreFiller(words));
+    scores.push((1.0, scoreFeedback(topic, question, answer).then(resp => resp.data.choices.text)))
     // max pause
     // TODO
     return scores
@@ -34,17 +35,50 @@ function scoreSpeed(answer, transcript_duration){
     }
 }
 
-function scoreKnowledge(topic, question, answer){
+async function scoreFeedback(topic, question, answer){
+    const { Configuration, OpenAIApi } = require("openai");
+        
+    const configuration = new Configuration({
+        apiKey: 'sk-',
+    });
+    const openai = new OpenAIApi(configuration);
 
+    let prompt = `Eric is reviewing his recent interview with this candidate for a ${topic} position and he is providing useful feedback to the candidate.
+        A good response to a question should fully answer all parts of the question, it should be specific and on-topic, it should highlight potential experiences, and it should show how the candidate is a good fit for the position.
+        A bad response might have bad grammer, not respond to the question, make the candidate seem like a poor fit, or not highlight the candidate's experience. 
+
+        Provide useful feedback to each candidate's response to Eric's question.
+        Question: "What is overfitting? How can you prevent it?"
+        Reponse: "Overfitting is when training some predictive model we find that the accuracy on the training set is significantly higher than the test set. This can occur for many reasons, a popular one is a model being overparameterized. We can understand overfitting as the model learning specific, non-relevant patterns in the training data that lead to poor generalization. Some approaches to prevent it include regularization, collecting more diverse data, or reducting the model's capacity."
+        Feedback: This is a great response. This response shows a deep understanding of the mechanism of overfitting and includes potential solutions to mitigate the problem. The answer is well-worded and thorough in its response.
+
+        Question: "What is your experience with designing for accessibility?"
+        Response: "I have designed several applications that are accessible to users with different levels of skill. I also participated in the Accessibility Summit last year where we discussed approaches to make the software more accessible."
+        Feedback: The response is well-written and provides some insight into how the candidate designs for accessibility. However, it could be longer and more detailed could be included on their experience at the Accessibility Summit including what they did, discussed, and learned.
+
+        Question: "What do you know about distributed systems?"
+        Response: "I have experience architecting applications that use message passing between different devices to solve complex problems."
+        Feedback: This response is short and vague. The candidate should have gone into more detail about how their task was related to distributed systems and how their experience taught them about working with distributed systems.
+
+        Question: "What are your thoughts on the role of testing in software engineering?"
+        Response: "I believe that testing is an important part of any project. It can catch bugs before they make it into production and help to ensure that the code is correct."
+        Feedback: The candidate should discuss different approaches they take to test their software. For example, what tests does the candidate write? Do they follow test-driven development patterns? Is the candidate skilled in test automation frameworks?
+
+        Question: "${question}"
+        Response: "${answer}"
+        Feedback:`
+
+        const response_p = await openai.createCompletion("text-davinci-002", {
+            prompt: prompt,
+            max_tokens: 120,
+            temperature: .6,
+            top_p: .5,
+            stop: ['Question:']
+        })
+        return response_p
+        
 }
 
-// function scoreExperience(topic, experience, answer){
-
-// }
-
-// function scoreRelavence(topic, question, answer){
-
-// }
 
 function scorePauses(words, transcript_duration){
     let pauses = 0;
