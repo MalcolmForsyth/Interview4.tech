@@ -9,7 +9,7 @@ export function scoreText(topic, experience, question, answer_transcript){
     scores.push(scoreFiller(words));
     // max pause
     // TODO
-
+    return scores
 }
 
 function scoreSpeed(answer, transcript_duration){
@@ -263,10 +263,6 @@ This is a great response. The candidate has articulated well why testing is impo
 Q: What is overfitting? How can you prevent it?
 A: Overfitting is, when training some predictive model, we find that the accuracy on the training set is significantly higher than the test set. This can occur for many reasons, a popular one is a model being overparameterized. We can understand overfitting as the model learning specific, non-relevant patterns in the training data that lead to poor generalization. Some approaches to prevent it include regularization, collecting more diverse data, or reducting the model's capacity.
 This is a great response. This response shows a deep understanding of the mechanism of overfitting and includes potential solutions to mitigate the problem. The answer is well-worded and thorough in its response.
-
-Q: Tell me about a time when you had to troubleshoot and debug a complex issue.
-A: One time, I had to debug an issue that was caused by a race condition in the code. The bug was difficult to reproduce because it only happened sporadically. I spent a lot of time reading through the code and trying to understand how it worked. Only by first taking the time to understand the code, I was able to track down the root cause of the problem and fix it. The problem was caused by two threads that were accessing the same data without synchronizing their access properly.
-The response is good. The candidate discusses how the candidate approached and fixed a complex issue and mentions some technical details about the problem and the solution.  
 
 Q: What are your thoughts on the role of testing in software engineering?
 A: I think a few tests can be nice to ensure that code works but they aren’t strictly necessary because you can usually just figure out if it works without them.
