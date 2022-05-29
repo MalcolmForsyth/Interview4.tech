@@ -8,9 +8,9 @@ import './ScoreCard.css'
 
 class ScoreCard extends React.Component {
 
-    
 
     render() {
+
 
         var score_array = [80,30,50,70]
         return (
