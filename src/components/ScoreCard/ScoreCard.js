@@ -4,44 +4,92 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import NewProgBar from "../NewProgBar/NewProgBar";
 import './ScoreCard.css'
 import {TOPIC, CURR_Q} from "../../views/QuestionScreen";
-import { Transcibed } from "../RecButton/RecButton";
+import { Transcribed } from "../RecButton/RecButton";
 
 
 
 var rendered_q = "";
-var old_scores = [];
+var scores = [(0, "None"), (0, "None"), (0, "None"), (0, "None")];
+var last_resp = "";
 
 class ScoreCard extends React.Component {
 
+
     
     componentDidMount() {
-        this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+        this.interval = setInterval(() => this.setState({ time: Date.now() }), 5000);
       }
       componentWillUnmount() {
         clearInterval(this.interval);
       }
 
     render() {
-        
-        if (CURR_Q != rendered_q){
-            var scores = scoreText(TOPIC, CURR_Q, Transcibed);
-            rendered_q = CURR_Q;
-            old_scores = scores
-        }
-        console.log(CURR_Q, rendered_q, old_scores, scores)
-        
-        return (
-            <div> 
-                <h1 className="scoretitletext">Your Scores</h1>
-                <div className="displaywindow">
-                    <NewProgBar className='displaybar' value={scores[0][0]} title={scores[0][1]} /> 
-                    <NewProgBar className='displaybar' value={scores[1][0]} title={scores[1][1]} /> 
-                    <NewProgBar className='displaybar' value={scores[2][0]} title={scores[2][1]} /> 
-                    <NewProgBar className='displaybar' value={scores[3][0]} title={scores[3][1]} /> 
-                
+        if (typeof Transcribed.text == 'undefined'){
+            // console.log("Transcribed Undefined")
+            return (
+                <div> 
+                    <h1 className="scoretitletext">Your Scores</h1>
+                    <div className="displaywindow">
+                        <NewProgBar className='displaybar' value={scores[0][0]} title={scores[0][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[1][0]} title={scores[1][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[2][0]} title={scores[2][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[3][0]} title={scores[3][1]} /> 
+                    
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
+        
+        else if (CURR_Q != rendered_q){
+            console.log("New Q")
+            var scores_p = scoreText(TOPIC, CURR_Q);
+          
+            rendered_q = CURR_Q;
+        }
+        else{
+            // console.log("??")
+            return (
+                <div> 
+                    <h1 className="scoretitletext">Your Scores</h1>
+                    <div className="displaywindow">
+                        <NewProgBar className='displaybar' value={scores[0][0]} title={scores[0][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[1][0]} title={scores[1][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[2][0]} title={scores[2][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[3][0]} title={scores[3][1]} /> 
+                    
+                    </div>
+                </div>
+            );
+        }
+        console.log(scores_p)   
+        return scores_p.then(scores_new => {
+            console.log(CURR_Q, rendered_q, scores, scores_new)
+            scores = scores_new
+            return (
+                <div> 
+                    <h1 className="scoretitletext">Your Scores</h1>
+                    <div className="displaywindow">
+                        <NewProgBar className='displaybar' value={scores[0][0]} title={scores[0][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[1][0]} title={scores[1][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[2][0]} title={scores[2][1]} /> 
+                        <NewProgBar className='displaybar' value={scores[3][0]} title={scores[3][1]} /> 
+                    
+                    </div>
+                </div>
+            );
+        })
+        // return (
+        //     <div> 
+        //         <h1 className="scoretitletext">Your Scores</h1>
+        //         <div className="displaywindow">
+        //             <NewProgBar className='displaybar' value={scores[0][0]} title={scores[0][1]} /> 
+        //             <NewProgBar className='displaybar' value={scores[1][0]} title={scores[1][1]} /> 
+        //             <NewProgBar className='displaybar' value={scores[2][0]} title={scores[2][1]} /> 
+        //             <NewProgBar className='displaybar' value={scores[3][0]} title={scores[3][1]} /> 
+                
+        //         </div>
+        //     </div>
+        // );
     }
 }
 

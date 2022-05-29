@@ -1,16 +1,22 @@
-export async function scoreText(topic, question, answer_transcript){
-    var answer = answer_transcript.ScoreText
-    var duration = answer_transcript.audio_duration
-    var words = answer_transcript.words
+import {Transcribed} from "./components/RecButton/RecButton"
+export async function scoreText(topic, question){
+    console.log(Transcribed)
+    var answer = Transcribed.text
+    var duration = Transcribed.duration
+    var words = Transcribed.words
     
     var scores = [];
+    console.log("SCORING", answer, duration)
     scores.push(scoreSpeed(answer, duration));
     scores.push(scorePauses(words, duration));
     scores.push(scoreFiller(words));
-    scores.push((1.0, scoreFeedback(topic, question, answer).then(resp => resp.data.choices.text)))
-    // max pause
-    // TODO
-    return scores
+    return await scoreFeedback(topic, question, answer).then(resp => {
+        
+        let x = resp.data.choices[0].text
+        console.log(x)
+        scores.push((1.0, x))
+        return scores
+    })
 }
 
 function scoreSpeed(answer, transcript_duration){
@@ -39,7 +45,7 @@ async function scoreFeedback(topic, question, answer){
     const { Configuration, OpenAIApi } = require("openai");
         
     const configuration = new Configuration({
-        apiKey: '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',
+        apiKey: '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',
     });
     const openai = new OpenAIApi(configuration);
 
@@ -113,7 +119,7 @@ function scoreFiller(words){
     for (let index = 0; index < words.length; ++index) {
         const word = words[index];
         let text = word.text;
-        if (filler_words.contains(text)){
+        if (filler_words.includes(text)){
             filler_cnt = filler_cnt + 1;
         } 
     }

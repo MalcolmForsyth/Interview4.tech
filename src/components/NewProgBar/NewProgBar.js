@@ -14,7 +14,7 @@ function NewProgBar(props) {
     return {backgroundColor : color, width: "calc(" + value + "% - 4px)" };
 
   }
-  console.log(barWidth())
+//  console.log(barWidth())
 
   return (
     <div className="displaytimer"> 

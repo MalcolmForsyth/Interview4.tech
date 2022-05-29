@@ -8,7 +8,7 @@ import ScoreCard from '../components/ScoreCard/ScoreCard';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import ParticlesBg from 'particles-bg';
 // import Transcibed from './globals';
-import {Transcibed} from '../components/RecButton/RecButton';
+import {Transcribed} from '../components/RecButton/RecButton';
 var prompt = `Eric is an interviewer asking questions to a interview candidate. Eric usually asks questions that build upon the last response that the candidate gave, but can also change the topic and ask a more general question. Questions should be short, well-phrased, and use key information from the candidates last response. 
 
 Provide interview questions to the candidate.
@@ -50,7 +50,7 @@ function QuestionScreen(props) {
     const { Configuration, OpenAIApi } = require("openai");
         
     const configuration = new Configuration({
-        apiKey: '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',
+        apiKey: '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',
     });
     const openai = new OpenAIApi(configuration);
 
@@ -70,11 +70,15 @@ function QuestionScreen(props) {
     const next_question = () => {
         // make new prompt
         // generate new Q
-        prompt = prompt + Transcibed.text;
+        console.log(prompt, Transcribed)
+        prompt = prompt + Transcribed.text;
         if (TOPIC == ""){
-            TOPIC = Transcibed.text;
+            TOPIC = Transcribed.text;
         }
-        Transcibed.text = "";
+        // Transcribed.text = undefined;
+        // Transcribed.duration = undefined;
+        // Transcribed.words = undefined;
+
         prompt = prompt + "\n";
         prompt = prompt + "Eric:"
         let question_p = getNextQ(prompt).then(resp => {
@@ -112,8 +116,8 @@ function QuestionScreen(props) {
           <CircularButton className="circular-button-1" onClick={() => reset()}>Reset</CircularButton>
           <RecButton className="rec-button-1">Record</RecButton>
           <CircularButton className="circular-button-3" onClick={() => reset()}>End</CircularButton>
-          {/* <ProgressBar bgcolor="red" scoreName="idk" completed={65}/> */}
-           <ScoreCard />
+          {/* <ProgressBar bgcolsr="red" scoreName="idk" completed={65}/> */}
+          {<ScoreCard />}
 
           {/* <CircularButton className="circular-button-3" onClick={() => next_question()}>End</CircularButton> */}
         </div>

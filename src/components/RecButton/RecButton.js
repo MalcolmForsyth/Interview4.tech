@@ -1,26 +1,21 @@
 import React from "react";
 import './RecButton.css';
-import Transcibed from "../../views/globals";
+import TranscribedTemplate from "../../views/globals";
 const axios = require("axios"); 
 
 const backend_path = "http://127.0.0.1:5000/transcribe"
+
+export var Transcribed = new TranscribedTemplate(undefined, undefined, undefined); 
 
 class RecButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {status: "not started", button_name: "Record"};
         
-        this.audioChunks = []    
+        this.audioChunks = []     
 
         navigator.mediaDevices.getUserMedia({audio:true})
         .then(stream => {this.handlerFunction(stream)})
-
-        const { Configuration, OpenAIApi } = require("openai");
-        
-        const configuration = new Configuration({
-            apiKey: '',
-        });
-        const openai = new OpenAIApi(configuration);
 
         
         this.assembly = axios.create({
@@ -30,7 +25,7 @@ class RecButton extends React.Component {
             "content-type": "application/json",
             //"transfer-encoding": "chunked",
         },
-});
+        });
         
         this.handleClick = this.handleClick.bind(this);
     }
@@ -48,7 +43,7 @@ class RecButton extends React.Component {
                 let blob = new Blob(this.audioChunks, {type:this.rec.mimeType});
                 let myUrl = URL.createObjectURL(blob)
                 //let blob = new File(tmp,"C:\\Users\\ghoey\\test_audio.mp3", {type:'audio/mpeg-3'});
-                console.log(blob)
+                // console.log(blob)
                 this.sendData(blob)
             }
         }
@@ -96,14 +91,12 @@ class RecButton extends React.Component {
         reader.onloadend = (event) => { 
            
             var data = reader.result
-            console.log(data)
-            console.log(reader.result)
+
           
             var url_p = this.assembly
                 .post("/upload", data)
                 .then((res) => { 
-                    console.log("b")
-                    console.log(data)
+
                     return res.data['upload_url']
 
             })
@@ -115,7 +108,7 @@ class RecButton extends React.Component {
                     audio_url: url
                 })
                 .then((res) => { 
-                    console.log(res.data)
+
                     return res.data})
                 .catch((err) => console.error(err));
         
@@ -128,12 +121,10 @@ class RecButton extends React.Component {
                     .then((res) => res.data)
                     .catch((err) => console.error(err))
                     const status_resp = await status
-                    console.log(status_resp)
+                  //  console.log(status_resp)
                     flag = status_resp.status !== "completed"
 
                    if (status_resp.status === "error") {
-                       console.log("error reached")
-                       console.log(status_resp)
                        break;
                    }
                 } 
@@ -142,8 +133,12 @@ class RecButton extends React.Component {
                     .then((res) => res.data)
                     .catch((err) => console.error(err))
                 const transcript = await transcript_p
-                // console.log(transcript.text)
-                Transcibed.text = transcript.text;
+                console.log("New transcript", transcript)
+               // Transcribed = transcript
+                Transcribed.text = transcript.text;
+                Transcribed.words = transcript.words;
+                Transcribed.duration = transcript.duration;
+                this.audioChunks = []
                 this.setState({
                     button_name: "Done",
                   });
@@ -192,4 +187,4 @@ class RecButton extends React.Component {
 }
 
 export default RecButton;
-export  {Transcibed};
+// export  {Transcribed};
