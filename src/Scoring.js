@@ -117,6 +117,13 @@ General:
 -Which is your most significant accomplishment?
 -What is your greatest strength?
 -What is your greatest weakness?
+-How do you handle stress and pressure?
+-What motivates you to do your best work?
+-What are your career aspirations?
+-What do you think is the most important skill for success in this role?
+-What would you say is your greatest achievement?
+-Why did you choose to interview with us?
+-What do you think are the most important qualities for success in this role?
 
 Software Engineering
 - What are the most important qualities for a software engineer?
@@ -196,9 +203,6 @@ Q: Tell me about a time when you had to troubleshoot and debug a complex issue.
 A: One time, I had to debug an issue that was caused by a race condition in the code. The bug was difficult to reproduce because it only happened sporadically. I spent a lot of time reading through the code and trying to understand how it worked. Only by first taking the time to understand the code, I was able to track down the root cause of the problem and fix it. The problem was caused by two threads that were accessing the same data without synchronizing their access properly.
 The response is good. The candidate discusses how the candidate approached and fixed a complex issue and mentions some technical details about the problem and the solution. 
 
-Q: What excites you about working in App Development?
-A: There are a lot of things that excite me about working in App Development but I find the process of seeing an app come to life and work correctly after all of the hard work that goes into it as the most rewarding. Of course, the cherry on top is to put that into the hands of people who like it.
-
 Q: What are your thoughts on object-oriented programming?
 A: I think that object-oriented programming is a good way to structure code because it makes the code more readable and easier to maintain. Additionally, OOP can help prevent errors by encapsulating data and methods.
 The response provides a brief but accurate overview of the advantages of object-oriented programming.
@@ -235,7 +239,6 @@ Q: Tell us about a time something went wrong in a project you were managing.
 A: One time the person I was managing didn't do the task that I asked, and I had to figure out how to make them do that task that I asked. It ended up fine.
 The response is too short and does not provide enough detail about the situation. Additionally, the candidate's response is very informal and poorly worded.
 
-
 Q: How would you handle a situation where another team member is not following your instructions?
 A: I would try to find out what the issue was and how I could help fix it. If that didn't work, then I might need to bring in someone else to help solve the problem.
 The response provides okay steps for solving a difficult situation with other team members, as well as if needed bringing in outside resources. The response is short and the candidate could have gone into more detail about how they may deal with potential issues.
@@ -267,5 +270,147 @@ This is a great response. This response shows a deep understanding of the mechan
 Q: What are your thoughts on the role of testing in software engineering?
 A: I think a few tests can be nice to ensure that code works but they aren’t strictly necessary because you can usually just figure out if it works without them.
 This is a bad response. The candidate does not believe in the need for comprehensive testing and does not provide any justification for their position. Additionally, the response is unorganized and poorly written.
+
+Q: What do you do to minimize security risks?
+A: I spend time understanding the risks and how to address them, but my responses are informal. They aren't technical enough for a response that is critical of their approach. 
+The response needs some improvements in terms of detail and length. Specifically, there isn’t any information on how the candidate would respond to different types of attacks from long-term vs short-term threats, for example.
+
+Q: Tell me about your design process.
+A: I use a process that is pattern-based and iterative. I document the steps in my code, make sure they are working as expected then continue to improve them over time. The response lacks detail on how their approach works or why it's effective at solving the problem at hand.
+This response has some issues with structure but overall provides good insight into the candidate’s design thinking skills for software development projects.
+
+Q: What is your experience with designing for accessibility?
+A: I have designed several applications that are accessible to users with different levels of skill. I also participated in the Accessibility Summit last year where we discussed approaches to make the software more accessible. 
+The response is well-written and provides some insight into how the candidate designs for accessibility. However, it could be longer and more detailed on their experience at the Accessibility Summit including what they did and discussed.
+
+Q: What do you know about Android development?
+A: I worked on an app this past summer that used Google's Firebase platform as part of a team project. We built features such as login functionality using Facebook API tokens along with other common tasks like fetching data from a database. 
+This response is a short but high-quality response, It shows a good understanding of mobile development trends overall by discussing popular tools such as Firebase and shows the candidate's knowledge by discussing their involvement in implementing login functionality.
+
+Q:How would people describe you?
+A: I am a passionate software engineer who is dedicated to delivering quality products. I have experience working on projects that meet the needs of their users. 
+The response is well-written but short and relatively vague. The candidate should have gone into more detail about why they seem this way to those around them.
+
+Q: What do you know about distributed systems?
+A: I have experience architecting applications that use message passing between different devices to solve complex problems. 
+The response is short and vague. The candidate should have gone into more detail about how their task was related to distributed systems and how their experience taught them about working with distributed systems.
+
+Q: What are your favorite tools and technologies?
+A: I use many different tools and technologies to build my projects. I enjoy working with cloud-based services like Google Cloud Platform because they make it easy to scale up products to reach many users quickly.
+The response is well-written but could be longer and more in-depth. They should discuss other tools and technologies they are a fan of. 
+
+Q: What are your experiences with agile methodology?
+A: I did an internship at another company last summer that used the agile methodology for their project assignments. I also participated in a project with some friends where we broke our tasks into smaller chunks and completed them one by one. We met weekly in stand-ups to plan who was doing what. 
+The candidate did well to discuss their experiences with the agile methodology, but should have taken the time to discuss more about what their participation with the agile methodology looked like at the company they worked with the previous summer. 
+
+Q: What are your thoughts on the role of testing in software engineering?
+A: I believe that testing is an important part of any project. It can catch bugs before they make it into production and help to ensure that the code is correct. 
+The candidate should discuss different approaches they take to test their software. For example, what tests does the candidate write? Do they follow test-driven development patterns? Is the candidate skilled in test automation frameworks?
+
+Q: Tell me about your personal development process.
+A: When I go to design some website, I find that I am often inspired by a certain type of user interface and want to incorporate that into my project. I try to keep track of how different parts of the site work together so that I can make improvements as needed over time. 
+The candidate does well to discuss their development process in more detail, including what they look for when making design decisions. However, their response is a little vague, giving a specific example of a situation where they followed this process could be a beneficial step.
+
+Q: How do you handle difficult challenges?
+A: When I am faced with a difficult challenge, I make sure to first take a step back and think about the problem from all possible angles. I try to find a solution that works well both in terms of technical complexity and business impact. An example of this is when I was working on a project last summer on the Apple Watch team. We built features to expand the functionality of the fitness tracking but found that we needed to completely rework the data pipeline. We spent a lot of time rebuilding the system to manage the sensor data from the ground up, which required us to speak to a lot of teams.
+This is an exceptional response. The candidate introduces their approach at a high level before discussing the specifics of how they applied their approach to a specific difficult challenge they faces while on the Apple Watch team.
+
+Q: Tell me about your past work experience in web development?
+A: I did an internship with Cisco this past summer where I helped redesign their website that allows users to receive customer support. We found that users had a bad experience with the interface of the site, so redesigning the UI/UX was a high-priority task. We focused on making it easy for users to find the information they were looking for with an intuitive page layout. I worked on making sure that all of the features of the site worked properly and that they were as fast as possible. 
+This is a good response. The candidate discusses their experience with web development and how they applied their skills to their internship at Cisco. They mention what their team focused on and also what their specific task was.
+
+Q: What is your experience with performance optimization techniques in Web Development?
+A: I worked on a team at the NCSA last summer that focused on improving the performance of our web application. We made sure to keep our code as modular as possible so that we could replace individual pieces if they became too slow. We used a profiler to track down where the bottleneck was in our system and modified our code to fix the problem.
+This is a good response. The candidate mentions their experience with performance optimization techniques in their role on a team at NCSA last summer that focused on improving the performance of their web application. They show an understanding of performance optimization by mentioning their use of a profiler to locate problematic sections of the codebase. 
+
+Q: Is there a mobile application that irritates you? How would you fix it?
+A: I am generally happy with the applications that I create. However, there is one that I worked on last summer that I think could be improved. It was a client application that allowed teachers to access their student data from their school's portal. It had a pretty standard user interface and used a lot of HTML templates, but because I was less experienced with the design-side of application developemnt I found that the different templates made the application confusing to navigate. Looking back, spending time early to establish a coherent design would have been beneficial to have an easy-to-use app.
+This is a good response. The candidate discusses their experience with a mobile application that they created and how they might have improved it. They discuss the candidate's experience and how they might have approached the design differently. This shows that the user has learned a lot about application development since they worked on this project. 
+
+Q: As a project manager, how do you prioritize and manage tasks?
+A: I prioritize my tasks based on what will have the greatest impact on the final result of the project. I try to find ways to combine different tasks into larger chunks of work that can be completed in a single session. If there is something that needs to be done but we don't have the time to do it right now, I will make sure to put it on the backlog so that we can tackle it later, potentially when we can pair it with a separate feature.
+The candidate does well to discuss their approach to prioritizing and managing tasks as a project manager. Although, they could have provided some concrete examples of when they applied this methodology to specific tasks.
+
+Q: As a software engineer, what was your most successful project? Why do you think was it successful?
+A: I think my most successful project was my last summer working on Amazon's Alexa team. We built features for the assistant to make her more useful to customers. One of my tasks was to build a feature that allowed customers to view their past orders for easy re-ordering. We built a UI for the order details page in the app that displayed the order details and a section for adding new orders. We also revamped the voice-based order flow to make it easy for customers to place new orders without having to remember when and what they purchased.
+This candidate does well to discuss their experiences on a team that found success. Their choice of the Alexa team was good, as the interviewer may be familiar with the product. They do not discuss why they believe their additions to the Alexa software were successful, though.
+
+Q: Explain the terms Artificial Intelligence, Machine Learning, and Deep Learning.
+A: AI stands for artificial intelligence and is the field of study that studies how computers can learn without being explicitly programmed. 
+This response is incomplete. They do not explain the terms for Machine Learning or Deep Learning.
+
+Q: How would you handle a situation where you had to work on a project that was assigned but did not have the required information?
+A: I would try googling or reading up on the subject matter so I could get started.
+This is an ineffective response. The candidate does not take any steps to find out more about the project before starting, which may lead to difficulty completing it satisfactorily.
+
+Q: What are your thoughts on the role of testing in software engineering?
+A: I believe that testing is an important part of any project. It can catch bugs before they make it into production and help to ensure that the code is correct. 
+The candidate should discuss different approaches they take to test their software. For example, what tests does the candidate write? Do they follow test-driven development patterns? Is the candidate skilled in test automation frameworks?
+
+Q: What are your thoughts on the role of testing in software engineering?
+A: I think a few tests can be nice to ensure that code works but they aren’t strictly necessary because you can usually just figure out if it works without them.
+This is a bad response. The candidate does not believe in the need for comprehensive testing and does not provide any justification for their position. Additionally, the response is unorganized and poorly written.
+
+Q: How would you handle a situation where you had to work on a project that was assigned but did not have the required information?
+A: I would go and talk to my supervisor or another team member who might be able to help me out. I believe in looking for help when it’s needed so that we can get the job done as efficiently as possible. 
+This is an effective response. The candidate shows willingness and flexibility by searching for assistance from others during difficult times. They communicate well with their supervisors and other team members, which contributes positively to the organization.
+
+Q: How do you approach problem solving?
+A: I typically approach problem solving by trying to figure out what the problem is and then trying to come up with a solution. I often start by trying to understand the problem at a high level and then work my way down to the specific details.
+This is a mediocre response. The candidate answers the question but fails to give any specific examples on when they use this problem solving approach.
+
+Q: How do you ensure effective technical communication to those without a technical background?
+A: I think one way that can be improved is by ensuring that all of the information that is being conveyed in a message is clear and concise. In addition, making sure that messages are well-organized and easy to read also helps make them more effective. 
+This is a vague response. The candidate provides solutions to ensuring effective technical communication but fails to provide concrete tips such as using clear language, arranging information well, and avoiding jargon
+
+Q: What are your thoughts on pair programming?
+A: I think that pairing is a great way to help people learn and develop their skills. It can also help to increase the quality of products because two minds working together often produces better solutions than one mind would alone.
+The candidate does well to provide their opinion on the benefits of Pair Programming, namely helping users improve their technical knowledge and produce high-quality software with less developer redundancy. 
+
+Q: How do you feel about taking on additional responsibilities outside of your normal role?
+A: I think it’s important to take on as many extra responsibilities as possible because that will help us learn and grow. It can also lead to opportunities for advancement in our careers down the road.
+The candidate is willing to shoulder added responsibility and believes that doing so will benefit their career growth. This demonstrates a good work ethic, initiative, and problem-solving skills.
+
+Q: How do you handle when something goes wrong on a project?
+A: If something goes wrong, I try to find as much information as possible so that I can figure out what went wrong and how to fix it. Once I have a better understanding of the problem, I will typically start working on solutions.
+This response is acceptable. The candidate has a method to solve issues by first understanding the core of the problem. The response is somewhat short.
+
+Q: For most of your projects, have you followed a specific process or guideline? If so, please describe.
+A: For the majority of my projects, I typically follow a process that involves designing the user interface first and then developing the code based on that design. An example is when I worked on a hackathon at the University of Toronto. My team and I first designed the user interface, and then broke into groups to  tackle each page's backend.
+The candidate has a process that they typically use when working on a project. They explain this in detail and give an example of a past project, which demonstrates their experience and knowledge in the field.
+
+Q: In your opinion, what is the most important skill for a software engineer?
+A: I believe that the most important skill for a software engineer is problem-solving skills. It’s really hard to design and build something if you don’t know how to solve problems.
+This response is good. The candidate stresses the importance of having strong problem-solving abilities which will help them in their career as a programmer
+
+Q: For most of your projects, have you followed a specific process or guideline? If so, please describe.
+A: For the majority of my projects, I typically follow a process that involves designing the user interface first and then developing the code based on that design. An example is when I worked on a hackathon at the University of Toronto. My team and I first designed the user interface, and then broke into groups to  tackle each page's backend.
+The candidate has a process that they typically use when working on a project. They explain this in detail and give an example of a past project, which demonstrates their experience and knowledge in the field.
+
+Q: What is your favorite language to work with and why?
+A: I have been known to use a variety of different languages in my projects. While I enjoy working with all of them, my favorite has probably been JavaScript over the past two years or so. It is a very high-level programming language that makes it easy to quickly design things like user interfaces. 
+This is a good response. The candidate discusses their experience trying out different languages and their reason for choosing one over another. 
+
+Q: What are your thoughts on the new Kamukama app? 
+A: I think that the new Kamukama app is great! It pulls in data from various sources, creates beautiful reports, and allows users to interact with it in lots of different ways. 
+
+Q: What is your response to the question, "What makes a good project manager?"
+A: I think that a good project manager will make sure that all of the details are taken care of and that the project comes in on time and within budget. 
+
+Q: What is your response to the question, "What are the most important qualities of a good project manager?"
+A: I think that being organized and able to communicate well with others are two of the most important qualities of a good project manager. These skills allow them to track deadlines and make sure that all steps in the process have been covered.
+This is an excellent response. The candidate discusses what makes a good project manager and gives insights into their experience with such positions. They provide insight into why these attributes are critical
+
+Q: What are your thoughts on the use of continuous delivery to bring stability to applications?
+A: I think that using continuous delivery can be a good way to bring stability to applications. It allows teams to quickly launch new versions of their software without having major breaks between updates. 
+The response is well-written and discusses the use of continuous delivery within the field. The candidate has insight into how this approach can help improve application development flows. They are knowledgable about industry practices like CI/CD.
+
+Q: Besides a technical response, what is your view on the importance of good communication in project management?
+A: I think that good communication is important in project management. It can be difficult to track deadlines and plans when they are being discussed via email or through some other form of communications not centered around code. 
+This is a well-worded response. The candidate discusses the role of communication within a project team and provides additional insights into why it is important.
+
+Q: What are your thoughts on the use of task forks in project management?
+A: I am not too familiar with task forks, so I will need to look into them and see if they have any uses within a project. 
+This is a good response. The candidate does not know much about this approach but wants to investigate it further. They provide some initial input for the question but then await more information before forming a formulated position on the matter. Showing interest in learning more about an issue is always valuable during the interview
 
 */
