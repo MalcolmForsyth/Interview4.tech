@@ -1,0 +1,46 @@
+.circular-button {
+    align-items: flex-start;
+    background-color: #ffff;
+    border-radius: 100%;
+    box-shadow: 0px 4px 14px #0000001a;
+    display: flex;
+    height: 60px;
+    margin-top: 15px;
+    min-width: 95px;
+    max-width: 95px;
+    position: absolute;
+    top: 75%;
+    left: 38.5%;
+    padding: 18px 118px;
+    cursor: pointer;
+    letter-spacing: 0;
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    letter-spacing: 0;
+
+    text-align: center;
+    color: #9e7ae3;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+  }
+.circular-button-1 {
+    left: 38.5%;
+    color: #9e7ae3;
+}
+.circular-button-2 {
+    left: 47%;
+    color: #e3947a;
+}
+.circular-button-3 {
+    left: 55.5%;
+    color: #e37a7a;
+}

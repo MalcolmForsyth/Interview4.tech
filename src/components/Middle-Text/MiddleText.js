@@ -6,10 +6,10 @@ class MiddleText extends React.Component {
         return (
             <div className="Middle-Text">
                 <i>
-                    ML-Based Interactive Interview Prep.
+                    ML-based interactive interview prep.
                 </i>
                 <i>
-                    practice makes perfect
+                    Practice makes perfect.
                 </i>
             </div>
         );

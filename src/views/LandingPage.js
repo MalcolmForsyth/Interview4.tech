@@ -16,10 +16,10 @@ class LandingPage extends React.Component {
         <div className="landing-screen">
             <h1></h1>
             <Header></Header>
-            <MiddleText></MiddleText>
             <a href='/question'>
-                <MainButton onClick={this.next()}> Get Started</MainButton>
+                <MainButton className="main-button-1" onClick={this.next()}> Begin</MainButton>
             </a>
+            <MiddleText></MiddleText>
         </div>
     );
     }
