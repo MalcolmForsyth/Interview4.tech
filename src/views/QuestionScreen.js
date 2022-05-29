@@ -19,7 +19,7 @@ function QuestionScreen(props) {
 
     async function response(prev_question) {
         const response = await cohere.generate(model_name, {
-            prompt: `You are an interviewer generating questions for an candidate for the position of ${JOB_CAREER}, your previous question was ${prev_question}`,
+            prompt: `You are an interviewer generating questions for an candidate for the position of ${JOB_CAREER}, your previous questions were was ${prev_question}`,
             max_tokens: 100,
             temperature: 0.9,
             frequency_penalty: 0.5,

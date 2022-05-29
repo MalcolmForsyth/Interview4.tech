@@ -391,12 +391,6 @@ Q: What is your favorite language to work with and why?
 A: I have been known to use a variety of different languages in my projects. While I enjoy working with all of them, my favorite has probably been JavaScript over the past two years or so. It is a very high-level programming language that makes it easy to quickly design things like user interfaces. 
 This is a good response. The candidate discusses their experience trying out different languages and their reason for choosing one over another. 
 
-Q: What are your thoughts on the new Kamukama app? 
-A: I think that the new Kamukama app is great! It pulls in data from various sources, creates beautiful reports, and allows users to interact with it in lots of different ways. 
-
-Q: What is your response to the question, "What makes a good project manager?"
-A: I think that a good project manager will make sure that all of the details are taken care of and that the project comes in on time and within budget. 
-
 Q: What is your response to the question, "What are the most important qualities of a good project manager?"
 A: I think that being organized and able to communicate well with others are two of the most important qualities of a good project manager. These skills allow them to track deadlines and make sure that all steps in the process have been covered.
 This is an excellent response. The candidate discusses what makes a good project manager and gives insights into their experience with such positions. They provide insight into why these attributes are critical
