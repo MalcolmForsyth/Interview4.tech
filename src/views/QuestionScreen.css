@@ -1,6 +1,7 @@
 .question-screen {
     align-items: center;
-    background: linear-gradient(162.94deg, #06d672 0%, #6e3ac1 98.61%);
+    /* background: linear-gradient(162.94deg, #06d672 0%, #6e3ac1 98.61%); */
+    background-color: #6fa0e5;
     display: flex;
     flex-direction: column;
     height: 570px;
@@ -22,6 +23,9 @@
     flex-shrink: 0;
     pointer-events: auto;
   }
+  * {
+    box-sizing: border-box;
+  }
   
   .title {
     height: 300px;
@@ -38,4 +42,5 @@
     font-style: normal;
     font-weight: 700;
   }
+
 

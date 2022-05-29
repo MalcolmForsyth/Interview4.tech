@@ -2,15 +2,34 @@ import './QuestionScreen.css';
 import React, { useState, useEffect, useRef } from "react";
 import MainButton from '../components/Button/Button';
 import Timer from "../components/Timer/Timer";
-import SocialFooter from "../components/SocialFooter/SocialFooter";
 import CircularButton from '../components/CircularButton/CircularButton';
 import RecButton from '../components/RecButton/RecButton';
+import ParticlesBg from 'particles-bg';
 
 function QuestionScreen(props) {
     const { title } = props;
-    const [question, setQuestion] = useState("Loading...");
-    const [questions, setQuestions] = useState(["Loading..."]);
+    const [question, setQuestion] = useState("What job title are you applying for?");
+    const [questions, setQuestions] = useState(["What job title are you applying for?"]);
     const [timerstart, timerreset] = useState([1]);
+
+    const cohere = require('cohere-ai');
+    const model_name = "";
+    var JOB_CAREER = "";
+    cohere.init('tqDPnl8QyMk4HmCHRRR2VL3ns94BecutsbQARYqx');
+
+    function response(prev_question) {
+        const response = await cohere.generate(model_name, {
+            prompt: `You are an interviewer generating questions for an candidate for the position of ${JOB_CAREER}, your previous question was ${prev_question}`,
+            max_tokens: 64,
+            temperature: 0.9,
+            frequency_penalty: 0.5,
+            presence_penalty: 1.0,
+            p: 0.6,
+            stop_sequences: '?'
+        });
+        
+        return response.body.classifications;
+    }
 
     const next = () => {
         timerreset(timerstart + 1);
@@ -25,7 +44,7 @@ function QuestionScreen(props) {
 
     useEffect(() => {    
     }, [timerstart]);
-  
+
     return (
     <div className="question-screen">
           <h1 className="title">{question}</h1>
