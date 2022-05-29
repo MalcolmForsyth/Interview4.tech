@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(50px + 2vmin);
+    font-size: calc(25px + 2vmin);
     color: white;
+    font-family: Tahoma ;
   }

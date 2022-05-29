@@ -1,0 +1,115 @@
+.social-footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 23px;
+    min-height: 80px;
+    width: 320px;
+  }
+  
+  .footer-text{
+    letter-spacing: 0;
+    margin-top: -1px;
+    min-height: 30px;
+    min-width: 200px;
+    text-align: center;
+  }
+  
+  .logo-white-container {
+    align-items: flex-start;
+    display: flex;
+    height: 25px;
+    margin-top: 25px;
+    min-width: 168px;
+  }
+  
+  .github-logo-white {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .ma-logo-white {
+    height: 24px;
+    margin-left: 24px;
+    width: 24px;
+  }
+  
+  .medium-logo-white {
+    align-self: flex-end;
+    height: 24px;
+    margin-left: 24px;
+    width: 24px;
+  }
+  
+  .screen {
+    min-width: 100vw;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    box-sizing: border-box;
+    line-height: normal;
+  }
+  
+  .screen a {
+    display: contents;
+    text-decoration: none;  
+  }
+  
+  .container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .container-center-horizontal > * {
+    flex-shrink: 0;
+    pointer-events: auto;
+  }
+  
+  .valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  :root { 
+    --black: #000000;
+    --blueberry: #5573ed;
+    --white: #ffffff;
+   
+    --font-size-l: 16px;
+    --font-size-m: 12px;
+    --font-size-xl: 18px;
+    --font-size-xxl: 32px;
+   
+    --font-family-inter: "Inter", Helvetica;
+  }
+  .inter-bold-white-32px {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .inter-bold-blueberry-18px {
+    color: var(--blueberry);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .inter-normal-white-12px {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+  }

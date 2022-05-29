@@ -6,13 +6,20 @@ import MiddleText from '../components/Middle-Text/MiddleText';
 import RecButton from '../components/RecButton/RecButton';
 
 class LandingPage extends React.Component {
+    next = () => {
+        
+    };
+
     render() {
     return (
-        <div className="App">
+      
+        <div className="landing-screen">
+            <h1></h1>
             <Header></Header>
             <MiddleText></MiddleText>
-            <RecButton></RecButton>
-            <MainButton></MainButton>
+            <a href='/question'>
+                <MainButton onClick={this.next()}> Get Started</MainButton>
+            </a>
         </div>
     );
     }

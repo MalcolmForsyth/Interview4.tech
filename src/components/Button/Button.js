@@ -1,19 +1,15 @@
 import React from "react";
-import './Button.css';
+import { Link } from "react-router-dom";
+import "./Button.css";
 
-class MainButton extends React.Component {
-    render() {
-        return (
-            <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-            <button
-                className="MainButton"
-            >
-            Get Started
-            </button>
-            </a>
+function MainButton(props) {
+  const { children, className, onClick } = props;
 
-        );
-    }
+  return (
+    <div className={`main-button ${className || ""}`} onClick={onClick}>
+      <div className="title-1 inter-bold-blueberry-18px">{children}</div>
+    </div>
+  );
 }
 
 export default MainButton;

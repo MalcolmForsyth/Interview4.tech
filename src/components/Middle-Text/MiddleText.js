@@ -4,9 +4,14 @@ import './MiddleText.css';
 class MiddleText extends React.Component {
     render() {
         return (
-            <strong className='Middle-Text'>
-                Interview prep for students of all ages
-            </strong>
+            <div className="Middle-Text">
+                <i>
+                    ML-Based Interactive Interview Prep.
+                </i>
+                <i>
+                    practice makes perfect
+                </i>
+            </div>
         );
     }
 }
