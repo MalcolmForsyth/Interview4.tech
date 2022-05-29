@@ -15,7 +15,13 @@ class RecButton extends React.Component {
         navigator.mediaDevices.getUserMedia({audio:true})
         .then(stream => {this.handlerFunction(stream)})
 
+        const { Configuration, OpenAIApi } = require("openai");
         
+        const configuration = new Configuration({
+            apiKey: '',
+        });
+        const openai = new OpenAIApi(configuration);
+
         
         this.assembly = axios.create({
         baseURL: "https://api.assemblyai.com/v2",
@@ -62,7 +68,6 @@ class RecButton extends React.Component {
 
 
     sendData(blob) {
-        const sleep = ms => new Promise(r => setTimeout(r, ms));
        
         /*
         console.log(blob)
@@ -139,10 +144,7 @@ class RecButton extends React.Component {
                 const transcript = await transcript_p
                 console.log(transcript.text)
 
-                this.setState({
-                   
-                    button_name: transcript.text
-                  });
+
                       
             });
         }

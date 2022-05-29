@@ -1,5 +1,6 @@
 'use strict';
 
+
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -22,13 +23,6 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
-const { Configuration, OpenAIApi } = require("openai");
-
-
-const configuration = new Configuration({
-  apiKey: "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",
-});
-const openai = new OpenAIApi(configuration);
 
 const ForkTsCheckerWebpackPlugin =
   process.env.TSC_COMPILE_ON_ERROR === 'true'

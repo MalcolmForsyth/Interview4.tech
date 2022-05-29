@@ -16,7 +16,6 @@ function QuestionScreen(props) {
     const [timerstart, timerreset] = useState([1]);
     const cohere = require("cohere-ai");
     cohere.init('tqDPnl8QyMk4HmCHRRR2VL3ns94BecutsbQARYqx');
-    
     const model_name = "xlarge";
     var JOB_CAREER = "";
     
@@ -40,7 +39,14 @@ function QuestionScreen(props) {
         console.log('hello');
         let resp = response(question);
         console.log(resp);
-        
+
+        let data = resp.then(res => {
+            console.log(res);
+        //    return res.body.generations[0].text;
+            setQuestion(res.body.generations[0].text);
+        })
+
+
         // response(question).then((res) =>
         // {
         //    // console.log(response);

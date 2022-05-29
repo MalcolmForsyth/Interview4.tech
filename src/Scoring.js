@@ -1,4 +1,4 @@
-export function scoreText(topic, experience, question, answer_transcript){
+export function scoreText(topic, experience, question, answer_transcript, openai){
     var answer = answer_transcript.ScoreText
     var duration = answer_transcript.audio_duration
     var words = answer_transcript.words
