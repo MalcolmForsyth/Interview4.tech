@@ -9,7 +9,7 @@ import ProgressBar from '../components/ProgressBar/ProgressBar';
 import ParticlesBg from 'particles-bg';
 // import Transcibed from './globals';
 import {Transcibed} from '../components/RecButton/RecButton';
-var prompt = `Eric is an interviewer asking questions to a candidate for the position of ${JOB_CAREER}. Eric usually asks questions that build upon the last response that the candidate gave, but can also change the topic and ask a more general question. Questions should be short, well-phrased, and use key information from the candidates last response. 
+var prompt = `Eric is an interviewer asking questions to a interview candidate. Eric usually asks questions that build upon the last response that the candidate gave, but can also change the topic and ask a more general question. Questions should be short, well-phrased, and use key information from the candidates last response. 
 
 Provide interview questions to the candidate.
 
@@ -68,14 +68,23 @@ function QuestionScreen(props) {
         // make new prompt
         // generate new Q
         prompt = prompt + Transcibed.text;
+        Transcibed.text = "";
         prompt = prompt + "\n";
         prompt =prompt + "Eric:"
-        question = getNextQ(prompt).then(resp => resp.data.choices.text)
-        prompt = prompt + question;
-        prompt = prompt + "\n";
-        prompt = prompt + "Malcolm:";
+        let question_p = getNextQ(prompt).then(resp => {
+            let question = resp.data.choices[0].text
+            console.log(resp)
+            prompt = prompt + question;
+            if (question.slice(-1) !== "\n"){
+                prompt = prompt + "\n";
+            }
+            prompt = prompt + "Malcolm:";
+            console.log(prompt)
+            setQuestion(question);
+        })
+        
 
-        setQuestion(question);
+        
     };
 
     const reset = () => {
