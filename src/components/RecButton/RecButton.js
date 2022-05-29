@@ -1,6 +1,6 @@
 import React from "react";
 import './RecButton.css';
-
+import Transcibed from "../../views/globals";
 const axios = require("axios"); 
 
 const backend_path = "http://127.0.0.1:5000/transcribe"
@@ -8,12 +8,19 @@ const backend_path = "http://127.0.0.1:5000/transcribe"
 class RecButton extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {status: "not started", button_name: "start"};
+        this.state = {status: "not started", button_name: "Record"};
         
         this.audioChunks = []    
 
         navigator.mediaDevices.getUserMedia({audio:true})
         .then(stream => {this.handlerFunction(stream)})
+
+        const { Configuration, OpenAIApi } = require("openai");
+        
+        const configuration = new Configuration({
+            apiKey: '',
+        });
+        const openai = new OpenAIApi(configuration);
 
         
         this.assembly = axios.create({
@@ -135,8 +142,11 @@ class RecButton extends React.Component {
                     .then((res) => res.data)
                     .catch((err) => console.error(err))
                 const transcript = await transcript_p
-                console.log(transcript.text)
-
+                // console.log(transcript.text)
+                Transcibed.text = transcript.text;
+                this.setState({
+                    button_name: "Done",
+                  });
 
                       
             });
@@ -148,7 +158,7 @@ class RecButton extends React.Component {
     handleClick() {
         if (this.state.status === "not started") {
             this.setState({
-                status: "recording", button_name: "recording"
+                status: "recording", button_name: "Stop"
               });
             
             this.rec.start()
@@ -157,16 +167,14 @@ class RecButton extends React.Component {
         } else if (this.state.status === "recording") {
             
             this.setState({
-                status: "not started"
+                status: "not started", button_name: "Wait"
             });
             this.rec.stop()
-            //this.sendData(this.rec.requestData())
            
             
         } else if (this.state.status === "done") {
-            //grey it out or something
             this.setState({
-                status: "not started"
+                status: "not started",
               });
         }
     }
@@ -184,3 +192,4 @@ class RecButton extends React.Component {
 }
 
 export default RecButton;
+export  {Transcibed};
