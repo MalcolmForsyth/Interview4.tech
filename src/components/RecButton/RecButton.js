@@ -15,13 +15,6 @@ class RecButton extends React.Component {
         navigator.mediaDevices.getUserMedia({audio:true})
         .then(stream => {this.handlerFunction(stream)})
 
-        const { Configuration, OpenAIApi } = require("openai");
-        
-        const configuration = new Configuration({
-            apiKey: '',
-        });
-        const openai = new OpenAIApi(configuration);
-
         
         this.assembly = axios.create({
         baseURL: "https://api.assemblyai.com/v2",
