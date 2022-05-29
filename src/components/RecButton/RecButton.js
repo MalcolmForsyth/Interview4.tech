@@ -177,9 +177,10 @@ class RecButton extends React.Component {
     render() {
         
         return (
-            <p>
-                <button onClick={this.handleClick}>{this.state.button_name}</button>
-            </p>
+
+            <div className={"rec-button"} onClick={this.handleClick}>
+            <div {...this.state.button_name}> </div>
+            </div>
 
         );
     }
