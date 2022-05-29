@@ -17,15 +17,15 @@ function QuestionScreen(props) {
     var JOB_CAREER = "";
     cohere.init('tqDPnl8QyMk4HmCHRRR2VL3ns94BecutsbQARYqx');
 
-    function response(prev_question) {
+    async function response(prev_question) {
         const response = await cohere.generate(model_name, {
             prompt: `You are an interviewer generating questions for an candidate for the position of ${JOB_CAREER}, your previous question was ${prev_question}`,
-            max_tokens: 64,
+            max_tokens: 100,
             temperature: 0.9,
             frequency_penalty: 0.5,
             presence_penalty: 1.0,
             p: 0.6,
-            stop_sequences: '?'
+            stop_sequences: ['?', '.']
         });
         
         return response.body.classifications;
