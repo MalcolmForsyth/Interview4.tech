@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+/* 此練習參考Youtube影片 
+Circular Progress Bar using HTML CSS & JavaScript | CodingNepal
+https://www.youtube.com/watch?v=_s0rqUkQkrQ&t=69s */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  display: grid;
+  height: 100%;
+  text-align: center;
+  place-items: center;
+  background: #fff;
+}
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+
+.inner,
+.outer,
+.circle {
+  position: absolute;
+  z-index: 6;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  /* box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2); */
+}
+.inner {
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background-color: #fff;
+  border-radius: 100%;
+  /* box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); */
+}
+.circle {
+  z-index: 1;
+  box-shadow: none;
+}
+.numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+}
+.numb-title {
+  font-size: 12px;
+}
+.bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+.progress,
+.dot span,
+.zero-dot span {
+  background: #ffdc35;
+}
+.left.progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.bar.right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+.right.progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+@keyframes right {
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+.dot {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 10px;
+  margin-top: -5px;
+  animation: dot 8s linear both;
+  transform-origin: 0% 50%;
+}
+.zero-dot {
+  z-index: 100;
+  position: absolute;
+  top: 5px;
+  left: 55%;
+  height: 10px;
+  margin-top: -5px;
+  transform-origin: 0% 50%;
+}
+.zero-dot span,
+.dot span {
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+@keyframes dot {
+  0% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+    z-index: 4;
+  }
+  100% {
+    transform: rotate(225deg);
+    z-index: 4;
+  }
+}

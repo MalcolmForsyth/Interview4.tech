@@ -4,6 +4,8 @@ import MainButton from '../components/Button/Button';
 import Timer from "../components/Timer/Timer";
 import CircularButton from '../components/CircularButton/CircularButton';
 import RecButton from '../components/RecButton/RecButton';
+import ScoreCard from '../components/ScoreCard/ScoreCard';
+import ProgressBar from '../components/ProgressBar/ProgressBar';
 import ParticlesBg from 'particles-bg';
 
 function QuestionScreen(props) {
@@ -60,6 +62,10 @@ function QuestionScreen(props) {
           <MainButton className="title-1" onClick={() => next_question()}>Next Question</MainButton>
           <CircularButton className="circular-button-1" onClick={() => reset()}>Reset</CircularButton>
           <RecButton className="rec-button-1">Record</RecButton>
+          <CircularButton className="circular-button-3" onClick={() => reset()}>End</CircularButton>
+          {/* <ProgressBar bgcolor="red" scoreName="idk" completed={65}/> */}
+          {/* <ScoreCard /> */}
+
           <CircularButton className="circular-button-3" onClick={() => next_question()}>End</CircularButton>
         </div>
     );

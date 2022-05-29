@@ -59,7 +59,7 @@ function scorePauses(words, transcript_duration){
         } // 2s
     }
     let perc_talking = 1 - (pause_time)/(transcript_duration)
-    if (score < .6){
+    if (perc_talking < .6){
         return (0.0 + Math.random()/5, `You had much too many pauses. We detected that ${Math.round(100*(pause_time)/(transcript_duration))}% of your time was with long pauses.`)
     }
     else if (perc_talking < .75){
