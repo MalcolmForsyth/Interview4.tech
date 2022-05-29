@@ -31,7 +31,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Sample Interviews!
+### Sample Interviews! 
 
 #### Machine Learning
 
@@ -54,7 +54,7 @@ MODEL: So would you say that the curse of dimensionality is more of a problem wi
 
 CANDIDATE:Yeah, I would say that the curse of dimensionality is a problem with certain types of models, but I might adjust that statement and say more so that we can use certain types of models as well as different approaches like regularization like data augmentation to mitigate the effects of the cursive dimensionality. Anytime we're trying to fit some low dimensional signal on some high dimensional data, there's going to be spurious correlations that we can overfit. Restricting the spurious correlations that we're allowing our model to fit to is just one approach that certain types of models being architected in a certain way solves.
 
-FEEDBACK: This response is confusing and does not directly answer the question. The candidate could have given a simpler example and discussed how the curse of dimensionality affects different types of models.
+FEEDBACK: **This response is confusing and does not directly answer the question. The candidate could have given a simpler example and discussed how the curse of dimensionality affects different types of models.**
 
 
 MODEL: Can you give me an example of a low dimensional signal on high dimensional data?
@@ -104,28 +104,28 @@ MODEL: How do you think about usability when designing web pages?
   
 CANDIDATE:For me, usability when designing web pages is making sure that all buttons and page transitions and sort of the flow as you go from the beginning to the end of the website is what you would expect it to do anyway if you were to sort of close your eyes for a moment and guess where a certain button might be or where one page might be that you would actually know already instinctively where that is. I think having that link guess beforehand on where things are helps a lot with making sure that web pages are usable.
   
-FEEDBACK: This response is too long and does not directly address the question. The candidate could have discussed how they take into account different user types when designing web pages or how they think about the user's journey when designing web pages.
+FEEDBACK: **This response is too long and does not directly address the question. The candidate could have discussed how they take into account different user types when designing web pages or how they think about the user's journey when designing web pages.**
 
   
 MODEL: Do you have any experience with A/B testing?
   
 CANDIDATE:I only have a little bit of experience with a B testing. I did it once for some internship at Cisco. At that internship, I you know, we wanted to revamp the customer service page, and we weren't quite sure which of two formats were going to be better. And so we did perform some AB testing, though I didn't get to see the result of that a B testing. But we did select the sort of a path that I think most of us assumed was going be the correct design that we were going to go with anyway. But the B path, the alternative option, did receive some interesting data, if I do recall.
 
-FEEDBACK: The candidate should be more concise in their response and focus on their experience with AB testing rather than the details of the customer service page.
+FEEDBACK: **The candidate should be more concise in their response and focus on their experience with AB testing rather than the details of the customer service page.**
 
   
 MODEL: Can you tell me more about the customer service page that you were revamping?
   
 CANDIDATE:Honestly, I can't to be honest, I was lying to you. I didn't revamp a customer service page, and I have no experience with a B testing. And so I don't feel confident telling you more about a customer service page that doesn't exist. And I know nothing about.
   
-FEEDBACK: This response is not helpful at all. The candidate should have given a more honest answer about their experience, even if it is limited.
+FEEDBACK: **This response is not helpful at all. The candidate should have given a more honest answer about their experience, even if it is limited.**
 
   
 MODEL: Do you have any experience with usability testing?
   
 CANDIDATE:This time I'll be more honest. I don't have any experience with usability testing and frankly, I'm not quite sure what usability testing means, although I'm very passionate about web development and UI UX development and I would love to learn more in applying my skills to these tasks in the future.
   
-FEEDBACK: The candidate is honest about their lack of experience, which is commendable. However, the candidate should have done more research on the topic before the interview. The candidate should explain what they know about usability testing and how they would be interested in applying their skills to the task.
+FEEDBACK: **The candidate is honest about their lack of experience, which is commendable. However, the candidate should have done more research on the topic before the interview. The candidate should explain what they know about usability testing and how they would be interested in applying their skills to the task.**
 
   
 MODEL: Do you have any experience with user research?
