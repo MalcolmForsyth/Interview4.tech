@@ -5,15 +5,17 @@ import NewProgBar from "../NewProgBar/NewProgBar";
 import './ScoreCard.css'
 
 
+
 class ScoreCard extends React.Component {
 
     
 
     render() {
+
         var score_array = [80,30,50,70]
         return (
             <div> 
-                <h1>Your Scores</h1>
+                <h1 className="scoretitletext">Your Scores</h1>
                 <div className="displaywindow">
                     <NewProgBar className='displaybar' value={score_array[0]} title="name of score" /> 
                     <NewProgBar className='displaybar' value={score_array[1]} title="does this work" /> 

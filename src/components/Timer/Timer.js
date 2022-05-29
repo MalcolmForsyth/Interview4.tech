@@ -36,8 +36,7 @@ function Timer(props) {
   return (
     <div className="timer">
       <div className="bar" style={barWidth()}></div>
-      <div className="text">{seconds}</div>
-      <img className="icon-clock" src="/img/clock@2x.svg" />      
+      <div className="text">{seconds}</div>     
     </div>
   );
 }

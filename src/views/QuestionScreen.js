@@ -106,7 +106,7 @@ function QuestionScreen(props) {
           <RecButton className="rec-button-1">Record</RecButton>
           <CircularButton className="circular-button-3" onClick={() => reset()}>End</CircularButton>
           {/* <ProgressBar bgcolor="red" scoreName="idk" completed={65}/> */}
-          {/* <ScoreCard /> */}
+           <ScoreCard />
 
           {/* <CircularButton className="circular-button-3" onClick={() => next_question()}>End</CircularButton> */}
         </div>
