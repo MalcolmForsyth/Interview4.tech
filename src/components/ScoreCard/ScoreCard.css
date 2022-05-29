@@ -1,15 +1,18 @@
-.window {  
+.displaywindow {  
     position: relative;
     align-items: center;
     justify-content: center;
     border: 10px solid #f800aebe;
     border-radius: 15px;
     display: flex;
-    height: 100rem;
+    height: 25rem;
     margin-left: 2.0px;
     margin-top: 23px;
-    width: 100rem;
+    width: 25rem;
     padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .bar {

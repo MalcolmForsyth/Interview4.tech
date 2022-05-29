@@ -11,14 +11,16 @@ function NewProgBar(props) {
   }
   const barWidth = () => {   
     
-    return {color: color, width: "calc(" + value + "% - 4px)" };
+    return {backgroundColor : color, width: "calc(" + value + "% - 4px)" };
 
   }
   console.log(barWidth())
 
   return (
-    <div className="timer"> 
+    <div className="displaytimer"> 
+        <div className="displaytext">{title}</div>
         <div className="displaybar" style={barWidth()}></div>
+        
     </div>
     //   <div className="bar" style={ width: "calc(" + value + "% - 4px)", color: {color}}></div>
     //   <div className="text">{title}</div> 

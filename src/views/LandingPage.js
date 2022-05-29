@@ -20,9 +20,6 @@ class LandingPage extends React.Component {
             <a href='/question'>
                 <MainButton className="main-button-1" onClick={this.next()}> Begin</MainButton>
             </a>
-            <MiddleText></MiddleText>
-            {/* <ScoreCard /> */}
-            <NewProgBar className='bar' value='60' title='test' />
 
         </div>
     );

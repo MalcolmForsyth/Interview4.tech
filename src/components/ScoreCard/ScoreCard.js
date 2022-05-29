@@ -10,14 +10,17 @@ class ScoreCard extends React.Component {
     
 
     render() {
-        var score_array = [10,60,30,50]
+        var score_array = [80,30,50,70]
         return (
-            <div classname="window">
-                <NewProgBar className='bar' bgcolor ="red" completed={score_array[0]} title="name of score" /> 
-                <NewProgBar className='bar' bgcolor ="green" completed={score_array[1]} tile="something" /> 
-                <NewProgBar className='bar' bgcolor ="yellow" completed={score_array[2]} title="another thing" /> 
-                <NewProgBar className='bar' bgcolor ="green" completed={score_array[3]} title="the final thing" /> 
+            <div> 
+                <h1>Your Scores</h1>
+                <div className="displaywindow">
+                    <NewProgBar className='displaybar' value={score_array[0]} title="name of score" /> 
+                    <NewProgBar className='displaybar' value={score_array[1]} title="does this work" /> 
+                    <NewProgBar className='displaybar' value={score_array[2]} title="another thing" /> 
+                    <NewProgBar className='displaybar' value={score_array[3]} title="the final thing" /> 
                 
+                </div>
             </div>
         );
     }
