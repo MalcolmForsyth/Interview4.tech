@@ -4,6 +4,7 @@ import MainButton from '../components/Button/Button';
 import Timer from "../components/Timer/Timer";
 import SocialFooter from "../components/SocialFooter/SocialFooter";
 import CircularButton from '../components/CircularButton/CircularButton';
+import RecButton from '../components/RecButton/RecButton';
 
 function QuestionScreen(props) {
     const { title } = props;
@@ -31,7 +32,7 @@ function QuestionScreen(props) {
           <Timer initialSeconds={60} index={timerstart} />
           <MainButton className="title-1" onClick={() => next()}>Next Question</MainButton>
           <CircularButton className="circular-button-1" onClick={() => reset()}>Reset</CircularButton>
-          <CircularButton className="circular-button-2" onClick={() => reset()}>Record</CircularButton>
+          <RecButton className="rec-button-1">Record</RecButton>
           <CircularButton className="circular-button-3" onClick={() => reset()}>End</CircularButton>
         </div>
     );
