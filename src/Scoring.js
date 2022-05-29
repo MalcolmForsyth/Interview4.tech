@@ -39,7 +39,7 @@ async function scoreFeedback(topic, question, answer){
     const { Configuration, OpenAIApi } = require("openai");
         
     const configuration = new Configuration({
-        apiKey: 'sk-',
+        apiKey: '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',
     });
     const openai = new OpenAIApi(configuration);
 

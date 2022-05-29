@@ -37,6 +37,9 @@ The candidate is Malcolm.
 Eric: What job title are you applying for?
 Malcolm:`
 
+export var TOPIC = "";
+export var CURR_Q = "";
+
 function QuestionScreen(props) {
     const { title } = props;
     const first_question = "What job title are you applying for?";
@@ -47,7 +50,7 @@ function QuestionScreen(props) {
     const { Configuration, OpenAIApi } = require("openai");
         
     const configuration = new Configuration({
-        apiKey: 'sk-',
+        apiKey: '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',
     });
     const openai = new OpenAIApi(configuration);
 
@@ -68,9 +71,12 @@ function QuestionScreen(props) {
         // make new prompt
         // generate new Q
         prompt = prompt + Transcibed.text;
+        if (TOPIC == ""){
+            TOPIC = Transcibed.text;
+        }
         Transcibed.text = "";
         prompt = prompt + "\n";
-        prompt =prompt + "Eric:"
+        prompt = prompt + "Eric:"
         let question_p = getNextQ(prompt).then(resp => {
             let question = resp.data.choices[0].text
             console.log(resp)
@@ -80,6 +86,7 @@ function QuestionScreen(props) {
             }
             prompt = prompt + "Malcolm:";
             console.log(prompt)
+            CURR_Q = question;
             setQuestion(question);
         })
         
