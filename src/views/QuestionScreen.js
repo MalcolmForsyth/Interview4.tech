@@ -78,7 +78,7 @@ function QuestionScreen(props) {
           {/* <ProgressBar bgcolor="red" scoreName="idk" completed={65}/> */}
           {/* <ScoreCard /> */}
 
-          <CircularButton className="circular-button-3" onClick={() => next_question()}>End</CircularButton>
+          {/* <CircularButton className="circular-button-3" onClick={() => next_question()}>End</CircularButton> */}
         </div>
     );
   }
