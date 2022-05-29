@@ -33,6 +33,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Sample Interviews! 
 
+(highlights are in bold)
+
 #### Machine Learning
 
 MODEL: What job title are you applying for?
