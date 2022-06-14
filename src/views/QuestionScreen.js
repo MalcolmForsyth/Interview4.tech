@@ -5,8 +5,6 @@ import Timer from "../components/Timer/Timer";
 import CircularButton from '../components/CircularButton/CircularButton';
 import RecButton from '../components/RecButton/RecButton';
 import ScoreCard from '../components/ScoreCard/ScoreCard';
-import ProgressBar from '../components/ProgressBar/ProgressBar';
-import ParticlesBg from 'particles-bg';
 // import Transcibed from './globals';
 import {Transcribed} from '../components/RecButton/RecButton';
 var prompt = `Eric is an interviewer asking questions to a interview candidate. Eric usually asks questions that build upon the last response that the candidate gave, but can also change the topic and ask a more general question. Questions should be short, well-phrased, and use key information from the candidates last response. 
@@ -46,24 +44,20 @@ function QuestionScreen(props) {
     const [question, setQuestion] = useState(first_question);
     const [questions, setQuestions] = useState([first_question]);
     const [timerstart, timerreset] = useState([1]);
-
-    const { Configuration, OpenAIApi } = require("openai");
         
-    const configuration = new Configuration({
-        apiKey: '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',
-    });
-    const openai = new OpenAIApi(configuration);
-
+    const cohere = require('cohere-ai');
+    cohere.init('tqDPnl8QyMk4HmCHRRR2VL3ns94BecutsbQARYqx');
+    
 
     async function getNextQ(prompt){
-        const response_p = await openai.createCompletion("text-davinci-002", {
+        const response_p = await cohere.generate('small', {
             prompt: prompt,
             max_tokens: 120,
-            temperature: .8,
-            top_p: .8,
-            frequency_penalty: 2.0,
-            stop: ['Malcolm:']
+            temperature: 0.6,
+            p: 0.5,
+            stop_sequences: ['Question:']
         })
+
         return response_p
     }
     
