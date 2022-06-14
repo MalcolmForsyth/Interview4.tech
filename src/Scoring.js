@@ -12,7 +12,7 @@ export async function scoreText(topic, question){
     scores.push(scoreFiller(words));
     return await scoreFeedback(topic, question, answer).then(resp => {
         
-        let x = resp.data.choices[0].text
+        let x = resp.body.generations[0].text
         console.log(x)
         scores.push((1.0, x))
         return scores
@@ -42,12 +42,14 @@ function scoreSpeed(answer, transcript_duration){
 }
 
 async function scoreFeedback(topic, question, answer){
-    const { Configuration, OpenAIApi } = require("openai");
+    const cohere = require('cohere-ai');
+
+    // const { Configuration, OpenAIApi } = require("openai");
         
-    const configuration = new Configuration({
-        apiKey: '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',
-    });
-    const openai = new OpenAIApi(configuration);
+    // const configuration = new Configuration({
+    //     apiKey: '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',
+    // });
+    // const openai = new OpenAIApi(configuration);
 
     let prompt = `Eric is reviewing his recent interview with this candidate for a ${topic} position and he is providing useful feedback to the candidate.
         A good response to a question should fully answer all parts of the question, it should be specific and on-topic, it should highlight potential experiences, and it should show how the candidate is a good fit for the position.
@@ -74,12 +76,20 @@ async function scoreFeedback(topic, question, answer){
         Response: "${answer}"
         Feedback:`
 
-        const response_p = await openai.createCompletion("text-davinci-002", {
+        // const response_p = await openai.createCompletion("text-davinci-002", {
+        //     prompt: prompt,
+        //     max_tokens: 120,
+        //     temperature: .6,
+        //     top_p: .5,
+        //     stop: ['Question:']
+        // })
+
+        const response_p = await cohere.generate('large', {
             prompt: prompt,
             max_tokens: 120,
-            temperature: .6,
-            top_p: .5,
-            stop: ['Question:']
+            temperature: 0.6,
+            p: 0.5,
+            stop_sequences: ['Question:']
         })
         return response_p
         
