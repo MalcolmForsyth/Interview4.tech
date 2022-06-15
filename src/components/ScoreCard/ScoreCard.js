@@ -24,27 +24,27 @@ class ScoreCard extends React.Component {
       }
 
     render() {
+        console.log(scores)
         if (typeof Transcribed.text == 'undefined'){
             // console.log("Transcribed Undefined")
             
 
             var feedback = ""
-            feedback = feedback + scores[0][1] + " "
-            feedback = feedback + scores[1][1] + ". "
-            feedback = feedback + scores[2][1] + ". "
-            feedback = feedback + scores[3][1] + ". "
+            feedback = feedback + scores[0] + " "
+            feedback = feedback + scores[1] + " "
+            feedback = feedback + scores[2] + " "
+            feedback = feedback + scores[3] + " "
             return (
             <div> 
                 <h1 className="scoretitletext">Your Scores</h1>
                 <div className="displaywindow">
-                    <NewProgBar className='displaybar' value={(scores[0])[0]} title="name of score" /> 
-                    <NewProgBar className='displaybar' value={(scores[1])[0]} title="does this work" /> 
-                    <NewProgBar className='displaybar' value={(scores[2])[0]} title="another thing" /> 
-                    <NewProgBar className='displaybar' value={(scores[3])[0]} title="the final thing" /> 
-                
+                    <NewProgBar className='displaybar' value={(scores[0])[0]} title="Speech Speed" /> 
+                    <NewProgBar className='displaybar' value={(scores[1])[0]} title="Pauses" /> 
+                    <NewProgBar className='displaybar' value={(scores[2])[0]} title="Filler Word Usage" /> 
+                  
                 </div>
-                <h1 className="scoretitletext">FeedBack:</h1>
-                <h1 className="feedbacktext">{feedback}</h1>
+                <h1 className="scoretitletext">Feedback:</h1>
+                <h4 className="feedbacktext">{feedback}</h4>
 
             </div>
             )
@@ -58,22 +58,21 @@ class ScoreCard extends React.Component {
         }
         else{
             var feedback = ""
-            feedback = feedback + scores[0][1] + " "
-            feedback = feedback + scores[1][1] + ". "
-            feedback = feedback + scores[2][1] + ". "
-            feedback = feedback + scores[3][1] + ". "
+            feedback = feedback + scores[0] + " "
+            feedback = feedback + scores[1] + " "
+            feedback = feedback + scores[2] + " "
+            feedback = feedback + scores[3] + " "
             return (
             <div> 
                 <h1 className="scoretitletext">Your Scores</h1>
                 <div className="displaywindow">
-                    <NewProgBar className='displaybar' value={(scores[0])[0]} title="name of score" /> 
-                    <NewProgBar className='displaybar' value={(scores[1])[0]} title="does this work" /> 
-                    <NewProgBar className='displaybar' value={(scores[2])[0]} title="another thing" /> 
-                    <NewProgBar className='displaybar' value={(scores[3])[0]} title="the final thing" /> 
-                
+                    <NewProgBar className='displaybar' value={(scores[0])[0]} title="Speech Speed" /> 
+                    <NewProgBar className='displaybar' value={(scores[1])[0]} title="Pauses" /> 
+                    <NewProgBar className='displaybar' value={(scores[2])[0]} title="Filler Word Usage" /> 
+                   
                 </div>
-                <h1 className="scoretitletext">FeedBack:</h1>
-                <h1 className="feedbacktext">{feedback}</h1>
+                <h1 className="scoretitletext">Feedback:</h1>
+                <h4 className="feedbacktext">{feedback}</h4>
 
             </div>
             )
@@ -83,22 +82,22 @@ class ScoreCard extends React.Component {
             console.log(CURR_Q, rendered_q, scores, scores_new)
             scores = scores_new
             var feedback = ""
-            feedback = feedback + scores[0][1] + " "
-            feedback = feedback + scores[1][1] + ". "
-            feedback = feedback + scores[2][1] + ". "
-            feedback = feedback + scores[3][1] + ". "
+            feedback = feedback + scores[0] + " "
+            feedback = feedback + scores[1] + " "
+            feedback = feedback + scores[2] + " "
+            feedback = feedback + scores[3] + " "
             return (
             <div> 
                 <h1 className="scoretitletext">Your Scores</h1>
                 <div className="displaywindow">
-                    <NewProgBar className='displaybar' value={(scores[0])[0]} title="name of score" /> 
-                    <NewProgBar className='displaybar' value={(scores[1])[0]} title="does this work" /> 
-                    <NewProgBar className='displaybar' value={(scores[2])[0]} title="another thing" /> 
-                    <NewProgBar className='displaybar' value={(scores[3])[0]} title="the final thing" /> 
+                    <NewProgBar className='displaybar' value={(scores[0])[0]} title="Speech Speed" /> 
+                    <NewProgBar className='displaybar' value={(scores[1])[0]} title="Pauses" /> 
+                    <NewProgBar className='displaybar' value={(scores[2])[0]} title="Filler Word Usage" /> 
+    
                 
                 </div>
-                <h1 className="scoretitletext">FeedBack:</h1>
-                <h1 className="feedbacktext">{feedback}</h1>
+                <h1 className="scoretitletext">Feedback:</h1>
+                <h4 className="feedbacktext">{feedback}</h4>
 
             </div>
             )
