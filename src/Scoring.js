@@ -20,10 +20,11 @@ export async function scoreText(topic, question){
 }
 
 function scoreSpeed(answer, transcript_duration){
+    
     let n_words = answer.split(' ').length;
-    let minutes = transcript_duration/60
+    let minutes = transcript_duration/60.0
     let wpm = Math.round(n_words/minutes)
-
+    console.log(n_words,  minutes, wpm)
     if (wpm < 105){
         return (0.0+ Math.random()/10, `You are speaking too slow. You spoke at ${wpm} words per minute. You want to speak from 125-165 words per minute.`)
     }

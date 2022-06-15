@@ -137,7 +137,7 @@ class RecButton extends React.Component {
                // Transcribed = transcript
                 Transcribed.text = transcript.text;
                 Transcribed.words = transcript.words;
-                Transcribed.duration = transcript.duration;
+                Transcribed.duration = transcript.audio_duration;
                 this.audioChunks = []
                 this.setState({
                     button_name: "Done",
