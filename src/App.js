@@ -15,7 +15,7 @@ class App extends React.Component {
                     <Route path='/' element={<LandingPage/>}/>
                     <Route path='/question' element={<QuestionScreen/>}/>
                 </Routes>
-            </Router>
+            </Router>    
         );
     }
 }

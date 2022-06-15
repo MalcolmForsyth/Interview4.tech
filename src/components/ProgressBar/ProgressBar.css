@@ -1,0 +1,42 @@
+.timer {  
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff80;
+    border-radius: 15px;
+    display: flex;
+    height: 32px;
+    margin-left: 2.0px;
+    margin-top: 23px;
+    width: 352px;
+    padding: 2px;
+  }
+  
+  .bar {
+    position: relative;
+    left: 100rem;
+    align-items: center;
+    background-color: #ffffff40;
+    border-radius: 15px;
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    transition: width 0.2s;
+  }
+  
+  .text {
+    color: #ffffff;
+    font-family:  "Inter", Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    min-height: 15px;
+    min-width: 17px;
+    text-align: center;
+  }
+  
+  .icon-clock {
+    position: absolute;
+    height: 18px;
+    right: 8px;
+    width: 18px;
+  }

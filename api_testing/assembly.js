@@ -9,7 +9,7 @@ const assembly = axios.create({
         "transfer-encoding": "chunked",
     },
 });
-const file = "recording.m4a";
+const file = "counting2.m4a";
 fs.readFile(file, (err, data) => {
     if (err) return console.error(err);
 
@@ -21,7 +21,8 @@ fs.readFile(file, (err, data) => {
     var data= url.then(data => {
         return assembly
         .post("/transcript", {
-            audio_url: data
+            audio_url: data,
+            disfluencies: true
         })
         .then((res) => res.data)
         .catch((err) => console.error(err));

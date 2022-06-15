@@ -8,9 +8,9 @@
     margin-top: 15px;
     min-width: 95px;
     max-width: 95px;
-    position: absolute;
-    top: 75%;
-    left: 38.5%;
+    /* position: absolute; */
+    /* top: 75%;
+    left: 38.5%; */
     padding: 18px 118px;
     cursor: pointer;
     letter-spacing: 0;
@@ -33,14 +33,22 @@
     font-weight: 700;
   }
 .circular-button-1 {
-    left: 38.5%;
+    position: relative;
+    top: 8.4rem; 
+    left: 11rem;
+    margin-left: 100px;
+    margin-right: 100px;
     color: #9e7ae3;
 }
 .circular-button-2 {
-    left: 47%;
+    position: relative;
+    left: 47vh;
+    margin-left: 500px;
     color: #e3947a;
 }
 .circular-button-3 {
-    left: 55.5%;
+    position: relative;
+    right: 11rem;
+    top: 0; 
     color: #e37a7a;
 }

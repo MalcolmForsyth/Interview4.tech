@@ -1,0 +1,42 @@
+.displaytimer {  
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #0c05056e;
+    border-radius: 15px;
+    display: flex;
+    height: 32px;
+    margin-left: 2.0px;
+    margin-top: 23px;
+    width: 352px;
+    padding: 2px;
+  }
+  
+  .displaybar {
+    position: absolute;
+    left: 2px;
+    align-items: center;
+    background-color: #20d498bb;
+    border-radius: 15px;
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+  }
+  
+  .displaytext {
+    color: #000000dc;
+    font-family:  "Inter", Helvetica;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    min-height: 15px;
+    min-width: 17px;
+    text-align: center;
+    z-index: 100;
+  }
+  
+  .icon-clock {
+    position: absolute;
+    height: 18px;
+    right: 8px;
+    width: 18px;
+  }

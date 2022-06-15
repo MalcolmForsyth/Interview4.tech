@@ -8,9 +8,6 @@
     margin-top: 15px;
     min-width: 95px;
     max-width: 95px;
-    position: absolute;
-    top: 75%;
-    left: 47%;
     padding: 18px 118px;
     cursor: pointer;
     letter-spacing: 0;
@@ -31,8 +28,14 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-  }
-.rec-button-1 {
-    left: 47%;
+
+    position: relative;
+    top: 4.2rem;
+    margin-left: 100px;
+    margin-right: 100px;
     color: #9e7ae3;
 }
+  /* 
+.rec-button-1 {
+    
+} */

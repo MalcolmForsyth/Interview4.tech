@@ -1,0 +1,60 @@
+.displaywindow {  
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #0505057a;
+    border-radius: 15px;
+    display: flex;
+    height: 20rem;
+    margin-left: 2.0px;
+    margin-top: 2px;
+    width: 25rem;
+    bottom: 35rem;
+    right: 36rem;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .bar {
+    position: relative;
+    left: 10rem;
+    align-items: center;
+    background-color: #ffffff40;
+    border-radius: 15px;
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    transition: width 0.2s;
+  }
+  
+  .text {
+    color: #ffffff;
+    font-family:  "Inter", Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    min-height: 15px;
+    min-width: 17px;
+    text-align: center;
+  }
+  
+  .icon-clock {
+    position: absolute;
+    height: 18px;
+    right: 8px;
+    width: 18px;
+  }
+  .scoretitletext{
+    color: #000000ce;
+    font-family:  "Inter", Helvetica;
+    position: relative;
+    bottom: 35rem;
+    right: 36rem;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    min-height: 15px;
+    min-width: 17px;
+    text-align: center;
+  }
