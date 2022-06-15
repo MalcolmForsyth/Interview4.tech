@@ -49,13 +49,14 @@ function QuestionScreen(props) {
     cohere.init('tqDPnl8QyMk4HmCHRRR2VL3ns94BecutsbQARYqx');
     
 
+
     async function getNextQ(prompt){
         const response_p = await cohere.generate('small', {
             prompt: prompt,
             max_tokens: 120,
             temperature: 0.6,
             p: 0.5,
-            stop_sequences: ['Question:']
+            stop_sequences: ['Malcolm:']
         })
 
         return response_p
@@ -76,7 +77,7 @@ function QuestionScreen(props) {
         prompt = prompt + "\n";
         prompt = prompt + "Eric:"
         let question_p = getNextQ(prompt).then(resp => {
-            let question = resp.data.choices[0].text
+            let question = resp.body.generations[0].text
             console.log(resp)
             prompt = prompt + question;
             if (question.slice(-1) !== "\n"){
