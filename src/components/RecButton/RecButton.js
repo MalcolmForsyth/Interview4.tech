@@ -105,7 +105,8 @@ class RecButton extends React.Component {
             var pending_response = url_p.then(url => {
                 return this.assembly
                 .post("/transcript", {
-                    audio_url: url
+                    audio_url: url,
+                    disfluencies: true
                 })
                 .then((res) => { 
 
@@ -133,7 +134,7 @@ class RecButton extends React.Component {
                     .then((res) => res.data)
                     .catch((err) => console.error(err))
                 const transcript = await transcript_p
-                console.log("New transcript", transcript)
+                console.log("New transcript::\n", transcript.text)
                // Transcribed = transcript
                 Transcribed.text = transcript.text;
                 Transcribed.words = transcript.words;

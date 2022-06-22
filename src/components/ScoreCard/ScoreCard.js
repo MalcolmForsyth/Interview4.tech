@@ -24,7 +24,7 @@ class ScoreCard extends React.Component {
       }
 
     render() {
-        console.log(scores)
+        //console.log(scores)
         if (typeof Transcribed.text == 'undefined'){
             // console.log("Transcribed Undefined")
             
@@ -51,8 +51,7 @@ class ScoreCard extends React.Component {
         }
         
         else if (CURR_Q != rendered_q){
-            console.log("New Q")
-            var scores_p = scoreText(TOPIC, CURR_Q);
+            var scores_p = scoreText(TOPIC, rendered_q);
           
             rendered_q = CURR_Q;
         }
@@ -77,9 +76,9 @@ class ScoreCard extends React.Component {
             </div>
             )
         }
-        console.log(scores_p)   
+        // console.log(scores_p)   
         return scores_p.then(scores_new => {
-            console.log(CURR_Q, rendered_q, scores, scores_new)
+            // console.log(CURR_Q, rendered_q, scores, scores_new)
             scores = scores_new
             var feedback = ""
             feedback = feedback + scores[0] + " "

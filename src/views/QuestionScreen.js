@@ -16,7 +16,7 @@ Eric: What job title are you applying for?
 Grant: Software Engineer 
 Eric: What are your thoughts on the role of testing in software engineering? 
 Grant: I think a comprehensive testing suite is an important part of any project. In my past internship at Amazon I wrote a suite of automated tests for their home assistant devices.
-Eric: What framework did you use to create automated tests? Was it difficult to learn?
+Eric: What framework did you use to create automated tests? Was it difficult to le arn?
 Grant: I used the Robot framework in Python. It wasn't too difficult to learn, since my mentor was able to guide me through it.
 Eric: Great, can you tell me more about what you were writing the tests for?
 
@@ -51,14 +51,14 @@ function QuestionScreen(props) {
 
 
     async function getNextQ(prompt){
-        const response_p = await cohere.generate('small', {
+        const response_p = await cohere.generate('large', {
             prompt: prompt,
             max_tokens: 120,
             temperature: 0.6,
             p: 0.5,
             stop_sequences: ['Malcolm:']
         })
-
+       
         return response_p
     }
     
@@ -77,7 +77,7 @@ function QuestionScreen(props) {
         prompt = prompt + "\n";
         prompt = prompt + "Eric:"
         let question_p = getNextQ(prompt).then(resp => {
-            let question = resp.body.generations[0].text
+            let question = resp.body.generations[0].text.replace("Malcolm:", "")
             console.log(resp)
             prompt = prompt + question;
             if (question.slice(-1) !== "\n"){
