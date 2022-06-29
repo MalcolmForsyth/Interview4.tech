@@ -1,4 +1,4 @@
-# Interviews4.tech
+# Interview4.tech
 
 Hello! We are William, Grant, and Malcolm and we are here to demonstrate the applicability of Large Language Modeling (LLM) for dynamic conversations between humans and AI. This is our project for the 2022 Toronto Hackathon!
 
